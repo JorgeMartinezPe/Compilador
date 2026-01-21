@@ -78,20 +78,3 @@ def tokenizar(codigo):
                 errores.append(f"Caracteres no reconocidos en línea {num_linea}, col {last_end+1}: '{basura}'")
 
     return tokens,contador_tokens, errores
-
-"""def verificar_parentesis_llaves(tokens):
-   #2) Paréntesis y llaves balanceados
-    stack = []
-    for _, tipo, val in tokens:
-        if tipo in ("PARENTESIS_APERTURA", "LLAVE_APERTURA"):
-            stack.append(tipo)
-        elif tipo == "PARENTESIS_CIERRE":
-            if not stack or stack.pop() != "PARENTESIS_APERTURA":
-                return "Error: paréntesis de cierre sin apertura"
-        elif tipo == "LLAVE_CIERRE":
-            if not stack or stack.pop() != "LLAVE_APERTURA":
-                return "Error: llave de cierre sin apertura"
-    if stack:
-        return "Error: falta cerrar paréntesis o llaves"
-    return None
-"""
